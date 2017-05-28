@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="description" content="Sebut ayatnya, dengarkan bacaannya !" />
+        <meta name="keywords" content="quran,al-quran,islam,ayat,surat" />
+        <meta name="robots" content="all" />
+        <meta name="author" content="Friandy Dwi Noviandha">
+
+        <title>Hai Qur'an !</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Scheherazade" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="main.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col s1 section">
+                    <div class="fixed-action-btn">
+                        <button id="listening" class="btn-floating btn-large waves-effect waves-light red">
+                            <i class="large material-icons">settings_voice</i>
+                        </button>
+                        <!-- Tap Target Structure -->
+                        <div class="tap-target" data-activates="listening">
+                            <div class="tap-target-content">
+                                <h5>Click icon untuk memulai !</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 section">
+                    <div class="content">
+                        <h5 id="text"></h5>
+                        <div class="progress" style="width:50%;margin:50px auto 0 auto;">
+                            <div class="indeterminate"></div>
+                        </div>
+                        <p id="ar"></p>
+                        <p id="id"></p>
+                        <audio id="audio" src="" type="audio/mpeg"></audio>
+                        <input type="hidden" id="surat" value="">
+                        <input type="hidden" id="ayat" value="">
+                    </div>
+                </div>
+                <div class="col s12">
+                    <ul class="collapsible" data-collapsible="accordion">
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">info_outline</i>Cara Penggunaan.</div>
+                            <div class="collapsible-body">
+                                <p>Ada beberapa fitur keyword yang dapat digunakan, yaitu :</p>
+                                <ul class="collapsible" data-collapsible="accordion">
+                                    <li>
+                                        <div class="collapsible-header"><i class="material-icons">code</i><strong>"Baca"</strong> - Menampilkan Ayat dan Bacaannya.</div>
+                                        <div class="collapsible-body">
+                                            <p>Tekan tombol <strong><a onclick="$('.tap-target').tapTarget('open')" style="cursor: pointer">microphone</a></strong> untuk memulai. Ucapkan keyword <strong>"baca"</strong> diikuti nomor surah dan ayat yang Anda inginkan.</p>
+                                            <p>Contoh : <strong>"baca surah 55 ayat 13".</strong></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="collapsible-header"><i class="material-icons">code</i><strong>"Ulangi"</strong> - Menampilkan Ayat dan Bacaannya yang sama.</div>
+                                        <div class="collapsible-body">
+                                            <p>Bisa juga menggunakan keyword <strong>"lagi".</strong></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="collapsible-header"><i class="material-icons">code</i><strong>"Selanjutnya"</strong> - Menampilkan Ayat dan Bacaannya selanjutnya.</div>
+                                        <div class="collapsible-body">
+                                            <p>Bisa juga menggunakan keyword <strong>"lanjut"</strong> atau <strong>"next"</strong>.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="collapsible-header"><i class="material-icons">code</i><strong>"Sebelumnya"</strong> - Menampilkan Ayat dan Bacaannya sebelumnya.</div>
+                                        <div class="collapsible-body">
+                                            <p>Bisa juga menggunakan keyword <strong>"previous"</strong>.</p>
+                                        </div>
+                                    </li>
+                                  </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">info_outline</i>Cara Penggunaan.</div>
+                            <div class="collapsible-body"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
